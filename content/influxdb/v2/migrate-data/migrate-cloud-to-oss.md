@@ -157,6 +157,7 @@ data = () =>
 rowCount =
     data()
         |> group(columns: ["_start", "_stop"])
+        |> toFloat()
         |> count()
 
 // emptyRange is a stream of tables that acts as filler data if the batch is
